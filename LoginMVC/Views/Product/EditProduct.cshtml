@@ -1,0 +1,46 @@
+﻿@model Product
+<partial name="_Notifications"></partial>
+<form method="post" enctype="multipart/form-data">
+    <div class="border p-3 mt-4">
+        <div class="row pb-2">
+            <h2 class="text-primary">Edit Product</h2>
+            <hr></hr>
+        </div>
+        <div class="mb-3">
+            <label>Name</label>
+            <input asp-for="Title" type="text" class="form-control" required />
+        </div>
+        <div class="mb-3">
+            <label>Description</label>
+            <input asp-for="Description" type="text" class="form-control" required />
+        </div>
+        <div class="mb-3">
+            <label>Author</label>
+            <input asp-for="Author" type="text" class="form-control" required />
+        </div>
+        <div class="mb-3">
+            <label>Price</label>
+            <input asp-for="Price" type="number" class="form-control" required />
+        </div>
+        <div class="mb-3">
+            <label>Category</label>
+            <select asp-for="CategoryId" asp-items="ViewBag.Categories" class="form-control">
+                <option disabled selected>--Select Category--</option>
+            </select>
+            <span class="text-danger">@Html.ValidationMessage("displayOrder")</span>
+        </div>
+        <div class="mb-3">
+            <label>Image</label>
+            <input asp-for="ImageURL" type="hidden">
+            <div><img src="@Model.ImageURL" alt="Product Image" width="100" height="120" /></div>
+            <input asp-for="ImageFile" type="file" class="form-control" />
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <button type="submit" class="btn btn-primary form-control">Update</button>
+            </div>
+            <div class="col-6">
+                <a asp-controller="Product" asp-action="Index" class="btn btn-secondary form-control">Back</a>
+            </div>
+        </div>
+</form>

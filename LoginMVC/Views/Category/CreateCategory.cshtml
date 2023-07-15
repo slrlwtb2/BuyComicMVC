@@ -1,0 +1,26 @@
+﻿<form method="post">
+    <div class="border p-3 mt-4">
+        <div class="row pb-2">
+            <h2 class="text-primary">Create Category</h2>
+            <hr></hr>
+        </div>
+        <div class="mb-3">
+            <label>Name</label>
+            <input type="text" class="form-control" name="name" value="@ViewBag.Name"/>
+            <span class="text-danger">@Html.ValidationMessage("name")</span>
+        </div>
+        <div class="mb-3">
+            <label>Display Order</label>
+            <input type="number" class="form-control" name="displayOrder"  value="@ViewBag.DisplayOrder" required />
+            <span class="text-danger">@Html.ValidationMessage("displayOrder")</span>
+
+        </div>
+       <div class="row">
+           <div class="col-6">
+                <button type="submit" class="btn btn-primary form-control">Create</button>
+           </div>
+           <div class="col-6">
+                <a asp-controller="Category" asp-action="Index" class="btn btn-secondary form-control">Back</a>
+           </div>
+       </div>
+</form>
