@@ -1,3 +1,6 @@
+# BuyComicMVC
+
+
 This project aimed to expand my knowledge of ASP.NET Core MVC and its key components. Throughout the process, I focused on several areas, including understanding MVC architecture, utilizing scaffolding features, differentiating between ASP.NET API and ASP.NET MVC, deploying a database and website using Azure, and improving my backend skills through working with controllers.
 
   you can check out the website by clicking [HERE](https://loginmvc20230712233557.azurewebsites.net/)
